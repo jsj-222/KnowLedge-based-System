@@ -1,18 +1,17 @@
 package com.my.konwlege.domain;
 
 public class Test {
-
-    private Integer id;
+    private Long id;
 
     private String name;
 
     private String password;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -30,5 +29,18 @@ public class Test {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", name=").append(name);
+        sb.append(", password=").append(password);
+        sb.append("]");
+        return sb.toString();
     }
 }
