@@ -1,5 +1,6 @@
-package com.my.konwlege;
+package com.my.konwlege.config;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +10,9 @@ import org.springframework.core.env.Environment;
 
 //项目调用但是和第三方不相关
 //@ComponentScan("com.my.konwlege","com.test")
+@ComponentScan("com.my")
 @SpringBootApplication
+@MapperScan("com.my.konwlege.mapper")
 public class KonwledgeBasedSystemApplication {
     private static final Logger LOG = LoggerFactory.getLogger(KonwledgeBasedSystemApplication.class);
     public static void main(String[] args) {
